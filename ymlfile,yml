@@ -12,4 +12,8 @@
         path: /root/paddy/ymlfile.txt
         state: touch
         mode: 0700
-        line: i love india
+
+    - name: write text into file
+      lineinfile:
+        path: /root/paddy/ymlfile.txt
+        line: india is great 
