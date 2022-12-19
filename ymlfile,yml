@@ -1,0 +1,16 @@
+-
+  name: playone
+  hosts: prasad
+  tasks: 
+    - name: code to creat dir name paddy
+      file:
+        path: /root/paddy
+        state: mkdir
+
+    - name: code to creat file with text and execute permission
+      file:
+        path: /root/paddy/ymlfile.txt
+        state: touch
+        line: i love india
+        mode: 0700
+        
