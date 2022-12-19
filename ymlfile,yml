@@ -5,12 +5,11 @@
     - name: code to creat dir name paddy
       file:
         path: /root/paddy
-        state: mkdir
-
+        state: directory
+        
     - name: code to creat file with text and execute permission
       file:
         path: /root/paddy/ymlfile.txt
         state: touch
-        line: i love india
         mode: 0700
-        
+        line: i love india
