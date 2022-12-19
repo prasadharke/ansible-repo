@@ -17,4 +17,3 @@
       lineinfile:
         path: /root/paddy/ymlfile.txt
         line: india is great 
-        
