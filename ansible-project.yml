@@ -6,6 +6,9 @@
       yum:
         name: httpd
         state: present
+    
+    - debug:
+        msg: Apache successfully installed
 
     - name: code to start the apache2 service
       service:
