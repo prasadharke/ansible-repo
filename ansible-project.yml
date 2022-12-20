@@ -27,19 +27,9 @@
         name: httpd
         state: started
         enabled: yes
-    
-    - name: create index.html file
-      file:
-        path: /opt/log/index.html
-        state: touch
-    
-    - name: write text into file
-      lineinfile:
-        path: /opt/log/index.html
-        line: 'Ansible-project'
 
     - name: copy html file
       copy:
-        src: /opt/log/index.html
+        src: index.html
         dest: /var/www/html/index.html
         
