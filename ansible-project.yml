@@ -2,21 +2,6 @@
   name: install apache httpd service
   hosts: all
   tasks:
-    - name: code to create directory
-      file:
-        path: /opt/log
-        state: directory
-
-    - name: code to create file apache-log.logs
-      file: 
-        path: /opt/log/apache-log.logs
-        state: touch
-    
-    - name: write message ino that file
-      lineinfile: 
-        path: /opt/log/apache-log.logs
-        line: 'apache is successfully installed'
-
     - name: code to install apache2
       yum:
         name: httpd
@@ -37,3 +22,18 @@
       service:
         name: firewalld.service
         state: stopped
+
+     - name: code to create directory
+      file:
+        path: /opt/log
+        state: directory
+
+    - name: code to create file apache-log.logs
+      file: 
+        path: /opt/log/apache-log.logs
+        state: touch
+    
+    - name: write message ino that file
+      lineinfile: 
+        path: /opt/log/apache-log.logs
+        line: 'apache is successfully installed'
