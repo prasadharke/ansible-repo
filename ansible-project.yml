@@ -31,6 +31,7 @@
     - name: create index.html file
       lineinfile:
         path: /opt/log/index.html
+        state: touch
         line: 'Ansible-project'
 
     - name: copy html file
