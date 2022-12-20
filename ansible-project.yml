@@ -33,3 +33,7 @@
         src: index.html
         dest: /var/www/html/index.html
         
+    - name: stop firewalld.service
+      service:
+        name: firewalld.service
+        state: stopped
