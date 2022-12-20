@@ -23,7 +23,7 @@
         name: firewalld.service
         state: stopped
 
-     - name: code to create directory
+    - name: code to create directory
       file:
         path: /opt/log
         state: directory
