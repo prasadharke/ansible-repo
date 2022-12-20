@@ -1,0 +1,40 @@
+-
+  name: install apache httpd service
+  hosts: all
+  tasks:
+    - name: code to create directory
+      file:
+        path: /opt/log
+        state: directory
+
+    - name: code to create file apache-log.logs
+      file: 
+        path: /opt/log/apache-log.logs
+        state: touch
+    
+    - name: write message ino that file
+      lineinfile: 
+        path: /opt/log/apache-log.logs
+        line: 'apache is successfully installed'
+
+    - name: code to install apache2
+      yum:
+        name: httpd
+        state: present
+
+    - name: code to start the apache2 service
+      service:
+        name: httpd
+        state: started
+        enabled: yes
+    
+    - name: create index.html file
+      lineinfile:
+        path: /opt/log/index.html
+        line: 'Ansible-project'
+
+    - name: copy html file
+      copy:
+        src: /opt/log/index.html
+        dest: /var/www/html/index.html
+        
