@@ -1,8 +1,8 @@
 -
-  name: code for loop 
+  name: code for loop
   hosts: prasad
   tasks:
-   - name: code to install loop items
+   - name: code to install loop 
      yum:
        name: "{{ item }}"
        state: present
