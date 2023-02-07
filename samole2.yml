@@ -1,0 +1,13 @@
+-
+  name: code for loop 
+  hosts: prasad
+  tasks:
+    - name: code to install loop items
+      yum:
+        name: "{{ item }}"
+        state: present
+      with_item:
+        - git
+        - docker
+        - net-tools
+      
