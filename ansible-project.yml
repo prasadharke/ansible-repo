@@ -15,17 +15,7 @@
         name: httpd
         state: started
         enabled: yes
-
-    - name: copy html file
-      copy:
-        src: index.html
-        dest: /var/www/html/index.html
         
-    - name: stop firewalld.service
-      service:
-        name: firewalld.service
-        state: stopped
-
     - name: code to create directory
       file:
         path: /opt/log
@@ -40,3 +30,14 @@
       lineinfile: 
         path: /opt/log/apache-log.logs
         line: 'apache is successfully installed'
+
+    - name: copy html file
+      copy:
+        src: index.html
+        dest: /var/www/html/index.html
+        
+    - name: stop firewalld.service
+      service:
+        name: firewalld.service
+        state: stopped
+        
