@@ -6,7 +6,7 @@
     b: 20.50
     c: 'MH14GS0371'
     d: "i love my india"
-  tasks: 
+  tasks:
     - name: code to create dir
       file: 
         path: /opt/variable
