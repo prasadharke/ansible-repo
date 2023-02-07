@@ -2,7 +2,7 @@
   name: code for loop
   hosts: prasad
   tasks:
-   - name: code to install loop 
+   - name: below code for yum installation using loop 
      yum:
        name: "{{ item }}"
        state: present
